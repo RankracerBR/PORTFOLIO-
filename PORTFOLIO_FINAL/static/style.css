@@ -1,0 +1,193 @@
+body {
+    margin: 0 auto;
+    font-size: 1em;
+    max-width: 100%; /* O máximo de largura é o tamanho da tela */
+    background-color: rgb(164, 182, 198);
+    transition: background-color 0.2s ease-in-out;
+    animation: transitionIn 0.85s;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes transitionIn{
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+  }
+
+  ul li {
+    display: inline-block;
+    margin: 1rem 1rem;
+    border-radius: 5px;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  ul li:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 1;
+  }
+  
+  ul li:hover {
+    transform: scale(1.25, 1.25);
+  }
+  
+  ul li:hover::after {
+    opacity: 1;
+  }
+
+a:link{
+    text-decoration: none;
+    color: #3770A1;
+    text-shadow: 0.1px 0.1px 0px rgb(164, 164, 164);
+}
+
+a:visited{
+    text-decoration: none; 
+    color: #3770A1;
+    text-shadow: 0.1px 0.1px 0px rgb(164, 164, 164);
+}
+
+#Inicio, #Projetos, #Sobre, #Experiencia, #Contato{
+    color: #3770A1;
+    font-family: Montserrat;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    display: inline-block;
+    margin-top: -185px;
+    margin-right: 2%; /* Espaço entre os elementos */
+    margin-left: 2%; /* Espaço entre os elementos */
+    padding: 2px 2px; /* Espaçamento interno */
+    border-radius: 10px;
+    text-shadow: 0.2px 0.2px 0.3px rgb(0, 0, 0,0);
+    position: fixed;
+    border: 1px solid black;
+    background-color: black;
+}
+
+#Inicio {
+    left: 2%; /* Distância da borda esquerda */
+}
+
+#Projetos {
+    left: 10%; /* Ajuste a porcentagem conforme necessário */
+}
+
+#Sobre {
+    left: 20%; /* Ajuste a porcentagem conforme necessário */
+}
+
+#Experiencia {
+    left: 28%; /* Ajuste a porcentagem conforme necessário */
+}
+
+#Contato{
+    left: 40%;
+}
+
+@media screen and (max-width: 768px) {
+    /* Estilos para telas menores, como dispositivos móveis */
+    #Inicio, #Projetos, #Sobre, #Experiencia, #Contato {
+        font-size: 1em; /* Reduza o tamanho da fonte */
+        width: 100%; /* Ocupa toda a largura da tela */
+        text-align: center; /* Centralize o texto */
+    }
+}
+
+#me_chamo{
+    color: #FFCE3E;
+    font-family: Montserrat;
+    font-size: 19.2px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 20%; /* Margem superior em relação à altura do contêiner pai */
+    margin-left: 3.2%; /* Margem esquerda em relação à largura do contêiner pai */
+    right: 5px;
+    text-shadow: 0.1px 0.1px 0px rgb(164, 164, 164);
+}
+
+#desenvolvedor{
+    color: #3770A1;
+    font-family: Montserrat;
+    font-size: 2em; /* Tamanho de fonte relativo */
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: -10px; 
+    margin-left: 3%; 
+    text-shadow: 0.1px 0.1px 0px rgb(164, 164, 164);
+}
+
+#Projetos_{
+    color: #3770A1;
+    font-family: Montserrat;
+    font-size: 2em; /* Tamanho de fonte relativo */
+    margin-left: 2%; /* Margem esquerda em relação à largura do contêiner pai */
+    margin-top: 10%; /* Margem superior em relação à altura do contêiner pai */
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 30px;
+}
+
+#my_img {
+    max-width: 30%; /* A imagem se ajustará automaticamente ao tamanho da tela */
+    height: auto; /* Manter a proporção original da imagem */
+    border-radius: 50%; /* Use 50% para criar um círculo se a imagem for quadrada */
+    display: block; /* Certifique-se de que a imagem seja exibida como um bloco */
+    margin: 0 auto; /* Centralize horizontalmente */
+    float: right; /* Alinhe à direita */
+    margin-top: -40px;
+}
+
+#my_bio{
+    width: 50%; /* Largura relativa ao contêiner pai */
+    font-size: 1em; /* Tamanho de fonte relativo */
+    margin-left: 2%; /* Margem esquerda relativa à largura do contêiner pai */
+    color: #5C5C5C;
+    font-family: Montserrat;
+    font-size: 19.2px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start; /* Alinha o carrossel à esquerda */
+    height: 100vh; /* Altura da viewport */
+    margin-left: 30px;
+}
+
+.square-container {
+    width: 65%; /* Largura do contêiner do carrossel */
+    overflow: hidden; /* Para esconder partes da imagem que não cabem */
+}
+
+.carousel-image {
+    width: 100%; /* Imagem ocupa todo o espaço disponível */
+    height: auto; /* Mantém a proporção original da imagem */
+}
+  
+
+  
+
+
+

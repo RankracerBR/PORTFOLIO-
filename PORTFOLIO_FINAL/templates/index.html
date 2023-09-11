@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/roll.js"></script>
+</head>
+
+<body>
+    <title>Boas-Vindas</title>
+    <ul>
+    <li id="Inicio"><a href="index.html">Início</a></li> 
+    <li id="Projetos"><a href="javascript:void(0);" onclick="scrollToElement('Projetos_')">Projetos</a></li>
+    <li id="Sobre">Sobre</li>
+    <li id="Experiencia">Experiência</li>
+    <li id="Contato">Contato</li>
+    </ul>
+    <img id="my_img" src="/img/my_img.png">
+    <h1 id="me_chamo">Me chamo Augusto Pontes</h1>    
+    <h1 id="desenvolvedor">Desenvolvedor Full-Stack</h1>
+    <h2 id="my_bio">
+        Olá, boas vindas ao meu portfólio, meu nome é Augusto sou desenvolvedor Full-Stack, 
+        sobre minhas experiências: Atuo como Dev Back-End na Nord-Dev e como Arquiteto cloud,
+        também sou monitor da disciplina de programação estruturada no IFPB
+    </h2>
+    <h1 id="Projetos_">Projetos</h1>
+    <div class="container">
+        <div class="square-container" id="square-container1">
+          <img src="/img/image1.png" class="carousel-image">
+        </div>
+      </div>
+      
+      <script>
+        // Array com URLs das imagens que você deseja exibir no carrossel
+        const imageUrls = [
+          "/img/image1.png",
+          "/img/image2.png",
+          "/img/image3.png",
+          "/img/image4.png",
+          "/img/image5.png",
+          "/img/image6.png",
+          "/img/image7.png",
+          "/img/image8.png",
+        ];
+      
+        let currentIndex = 0;
+        const squareContainer = document.getElementById("square-container1");
+        const imageElement = squareContainer.querySelector(".carousel-image");
+      
+        function changeImage() {
+          // Altera a imagem para a próxima imagem no array
+          imageElement.src = imageUrls[currentIndex];
+      
+          // Incrementa o índice atual e volta ao início se necessário
+          currentIndex = (currentIndex + 1) % imageUrls.length;
+        }
+      
+        // Inicializa o carrossel e define o intervalo para 5 segundos (5000 milissegundos)
+        changeImage();
+        setInterval(changeImage, 5000);
+      </script>
+</body>
+</html>
